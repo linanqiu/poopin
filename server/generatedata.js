@@ -21,8 +21,8 @@ if (Toilets.find().count() === 0) {
 
   for (var i = 0; i < seedCount; i++) {
 
-    var longitude = Math.random() * 360 - 180;
-    var latitude = Math.random() * 180 - 90;
+    var longitude = -73.9619 + Math.random() * 0.2 - 0.1;
+    var latitude = 40.8075 + Math.random() * 0.2 - 0.1;
 
     var toilet = {
       location: {
@@ -57,7 +57,7 @@ function generateReview(userId) {
     author: userId,
     createdAt: new Date().getTime(),
     content: "Bacon ipsum dolor sit amet prosciutto turkey brisket shank filet mignon.",
-    poops: Math.floor(Math.random() * 5 + 1)
+    rolls: Math.floor(Math.random() * 5 + 1)
   };
 
   return review;
