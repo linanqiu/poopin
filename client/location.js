@@ -1,8 +1,7 @@
 function getLocation() {
   if(navigator.geolocation) {
-    var watchID = navigator.geolocation.watchPosition(function(position) {
+    navigator.geolocation.getCurrentPosition(function(position) {
       Session.set('location', position);
-      console.log(position.coords);
     });
   } else {
     console.log("Geolocation not supported");

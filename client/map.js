@@ -14,7 +14,6 @@ Template.map.rendered = function() {
       map.panTo(center);
       addMarkers(map, [position.coords.longitude, position.coords.latitude]);
     }
-
   });
 }
 
